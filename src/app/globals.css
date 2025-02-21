@@ -46,8 +46,8 @@ a {
   }
   }
   .quick-clasic-button{
-    padding: 10px;
-    border-radius: 10px;
+    padding: 4px 10px;
+    border-radius: 6px;
   background: #E48700;
   box-shadow: 0px 4px 19px 0px rgba(119, 147, 65, 0.30);
   color: #FFF;
@@ -61,6 +61,8 @@ a {
     background: #f59003;
     border: 1px solid #E48700;
     box-shadow: 4px 8px 34px 0px #E48700;
+    translate: 2px;
+    transition: ease-in-out 0.1s;
   }
   .quick-clasic-button:hover{
     background: #e4a700;
@@ -80,9 +82,9 @@ a {
   }
   
   .q_b_clasic_add{
-    padding: 2px 18px;
+    padding: 3px 16px;
     border-radius: 6px;
-  background: #4CAF4F;
+  background: #1aa81f;
   box-shadow: 0px 4px 19px 0px rgba(119, 147, 65, 0.30);
   color: #FFF;
   font-size: 14px;
@@ -95,7 +97,7 @@ a {
     background: #2cb131;
     box-shadow: 0px 9px 19px 0px #10b015;
     transform: translate(4px);
-    animation: Rountd 0.1s ease-in-out; /* Specify duration and timing function */
+    animation: Rountd 0.1s ease-in-out;
   }
   
   @keyframes Rountd {
@@ -106,7 +108,7 @@ a {
         transform: translate(1px);
     }
     50% {
-        transform: translate(2px); /* Return to original position */
+        transform: translate(2px);
     }
     75%{
       transform: translate(3px);

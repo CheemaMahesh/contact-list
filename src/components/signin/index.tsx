@@ -9,7 +9,6 @@ import Image from "next/image";
 
 const SignIn = () => {
     const { signin } = useAuth();
-    const token = localStorage.getItem("contacts-token") as string;
     const [showPassword, setShowPassword] = useState<boolean>(false);
     const [signInData, setSignInData] = useState<SignUpForm>({
         email: "",
@@ -31,10 +30,11 @@ const SignIn = () => {
     }
 
     useEffect(() => {
+        const token = localStorage.getItem("contacts-token") as string;
         if (token) {
             window.location.href = "/";
         }
-    },[token]);
+    },[]);
 
     return (
         <div className="signuppage bg-[#ECBC76] w-full h-[100vh] flex justify-center items-center">
