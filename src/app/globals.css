@@ -2,3 +2,117 @@
 @tailwind components;
 @tailwind utilities;
 
+a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+  }
+  a:hover {
+    color: #535bf2;
+  }
+  
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+  }
+  
+  button:hover {
+    border-color: #646cff;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    a:hover {
+      color: #747bff;
+    }
+  }
+  
+  .form_container {
+    border-radius: 40px;
+  background: #FFF;
+  box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+  }
+  .form_inputs{
+    border-radius: 9px;
+    border: 1px solid #E48700;
+  background: #FFF;
+  padding-left: 10px;
+  
+  ::placeholder{
+    color: #8D8D8D;
+  }
+  }
+  .quick-clasic-button{
+    padding: 10px;
+    border-radius: 10px;
+  background: #E48700;
+  box-shadow: 0px 4px 19px 0px rgba(119, 147, 65, 0.30);
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #E48700;
+  }
+  .quick-clasic-button:active{
+    background: #f59003;
+    border: 1px solid #E48700;
+    box-shadow: 4px 8px 34px 0px #E48700;
+  }
+  .quick-clasic-button:hover{
+    background: #e4a700;
+    border: 1px solid #E48700;
+  }
+  
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+      outline: none;
+  }
+  
+  .q_b_text{
+    font-size: 34px;
+    color: #E48700;
+  }
+  
+  .q_b_clasic_add{
+    padding: 2px 18px;
+    border-radius: 6px;
+  background: #4CAF4F;
+  box-shadow: 0px 4px 19px 0px rgba(119, 147, 65, 0.30);
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  margin-left: 4px;
+  }
+  .q_b_clasic_add:active {
+    background: #2cb131;
+    box-shadow: 0px 9px 19px 0px #10b015;
+    transform: translate(4px);
+    animation: Rountd 0.1s ease-in-out; /* Specify duration and timing function */
+  }
+  
+  @keyframes Rountd {
+    0% {
+        transform: translate(0px);
+    }
+    25% {
+        transform: translate(1px);
+    }
+    50% {
+        transform: translate(2px); /* Return to original position */
+    }
+    75%{
+      transform: translate(3px);
+    }
+    100%{
+      transform: translate(4px);
+    }
+  }
+  
