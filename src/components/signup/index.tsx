@@ -10,12 +10,14 @@ import Image from "next/image";
 const SignUp = () => {
     const { signup } = useAuth();
     const [showPassword, setShowPassword] = useState<boolean>(false);
+    const [load, setLoad] = useState<boolean>(false);
     const [signUpData, setSignUpData] = useState<SignUpForm>({
         name: "",
         email: "",
         password: "",
     })
     const postAuth = async () => {
+        setLoad(true);
         const res = await signup(signUpData);
         if(res?.data?.token){
             localStorage.setItem("contacts-token", res?.data?.token as string);
@@ -23,6 +25,7 @@ const SignUp = () => {
         } else {
             alert("Something went wrong please try again!");
         }
+        setLoad(false);
     };
     const handleChange = (type: string, value: string) => {
         setSignUpData((prevData) => ({
@@ -40,6 +43,26 @@ const SignUp = () => {
 
     return (
         <div className="signuppage bg-[#ECBC76] w-full h-[100vh] flex justify-center items-center">
+            {load ? (
+                <div className="flex w-full h-full items-center justify-center">
+                <div className="loader max-sm:w-[200px] max-sm:h-[200px]"></div>
+                <style jsx>{`
+            .loader {
+                border: 8px solid #f3f3f3;
+                border-top: 8px solid #3498db;
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+                animation: spin 1s linear infinite;
+            }
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        `}</style>
+            </div>
+            ) :
             <div className="form_container w-[370px] h-[540px] shadow-2xs bg-[#FFF] rounded-md p-6 py-8">
                 <div className="form_parent Poppins p-2 flex flex-col gap-8">
                     <div className="w-full flex justify-between">
@@ -82,7 +105,7 @@ const SignUp = () => {
                         </button>
                     </div>
                 </div>
-            </div>
+            </div>}
         </div>
     )
 };
