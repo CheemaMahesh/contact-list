@@ -10,8 +10,8 @@ interface ContactsInterface {
 
 interface TableProps {
     contactsList: ContactsInterface[];
-    onDelete: (id: number) => void; // Function to handle delete action
-    onUpdate: (contact: ContactsInterface) => void; // Function to handle update action
+    onDelete: ({name, contact, id}: {name?: string, contact?: string, id: number}) => void; // Function to handle delete action
+    onUpdate: ({name, contact, id}: {name?: string, contact?: string, id: number}) => void; // Function to handle update action
 }
 
 const Table: React.FC<TableProps> = ({ contactsList, onDelete, onUpdate }) => {
@@ -38,7 +38,7 @@ const Table: React.FC<TableProps> = ({ contactsList, onDelete, onUpdate }) => {
                                     Update
                                 </button>
                                 <button
-                                    onClick={() => onDelete(contact)}
+                                    onClick={() => onDelete({name: contact.title, contact: contact.contact, id: contact.id})}
                                     className="bg-red-500 text-white py-1 px-3 rounded hover:bg-red-600"
                                 >
                                     Delete

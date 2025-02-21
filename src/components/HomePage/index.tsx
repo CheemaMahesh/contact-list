@@ -4,7 +4,6 @@ import Modal from "../Modal";
 import EmptyState from '../EmptyState';
 import useData from "../Hooks/useData";
 import Table from "../Table";
-import Loader from "../Loader";
 
 interface DetailsInterface {
     name: string;
@@ -72,10 +71,10 @@ const Home = () => {
             getContacts(token as string);
         }
     }
-    const handleUpdate = ({ name, contact, id }: { name: string, contact: string, id: number }) => {
+    const handleUpdate = ({ name, contact, id }: {name?: string, contact?: string, id: number}) => {
         setDetails({
-            name,
-            contact,
+            name: String(name),
+            contact: String(contact),
         });
         handleOpenModal();
         setCurrentId(id);
