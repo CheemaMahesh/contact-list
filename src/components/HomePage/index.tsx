@@ -103,6 +103,10 @@ const Home = () => {
             getContacts(token as string);
             handleCloseModal();
             setCurrentId(0);
+            setDetails({
+                name: "",
+                contact: "",
+            });
         }
         setCLoad(false);
     };
@@ -131,7 +135,7 @@ const Home = () => {
         <section className="flex flex-col items-center w-screen h-screen bg-gradient-to-r from-blue-400 to-white">
             <div className="w-full h-fit p-6 flex justify-end gap-8">
                 <button className="q_b_clasic_add" onClick={handleOpenModal}>Add Contact</button>
-                <button className="quick-clasic-button" onClick={handleClear}>LogOut</button>
+                <button className="quick-clasic-button" onClick={handleClear}>Logout</button>
             </div>
             <div className="w-full h-fit p-6">
                 <p className="text-4xl font-mono font-semibold">Hello <span className="font-bold text-5xl">{userName}!</span> Welcome to Your Contact List</p>

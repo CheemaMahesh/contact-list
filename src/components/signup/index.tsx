@@ -67,7 +67,7 @@ const SignUp = () => {
                 <div className="form_parent Poppins p-2 flex flex-col gap-8">
                     <div className="w-full flex justify-between">
                         <div className="flex flex-col gap-2">
-                            <p className="text-lg -ml-[5px]">Welcome to <span className="font-bold text-[#E48700]">Q-B</span></p>
+                            <p className="text-lg -ml-[5px]">Welcome to <span className="font-bold text-[#E48700]">C-L</span></p>
                             <div className="text-5xl font-bold">
                                 Sign up
                             </div>

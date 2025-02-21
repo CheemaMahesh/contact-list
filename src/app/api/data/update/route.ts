@@ -3,7 +3,11 @@ import {getServerSideProps} from '../../../../Utils';
 import jwt from 'jsonwebtoken';
 
 export const POST = async (req: Request) => {
-    const KEY = "MAHESH";
+    const KEY = process.env.NEXT_PUBLIC_JWT_KEYL;
+
+    if (!KEY) {
+        throw new Error("JWT key is not defined in the environment variables.");
+    }
 
     const client = await getServerSideProps();
     
