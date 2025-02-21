@@ -18,42 +18,42 @@
 
 
 <h1>Folder Structure</h1>
-contack-list/<br />
+Contact List C-L/<br />
 │<br />
-├── .env                       # Environment variables<br />
-├── .gitignore                 # Git ignore file<br />
-├── package.json               # Project metadata and dependencies<br />
-├── tsconfig.json              # TypeScript configuration<br />
+├── .env<br />
+├── .gitignore<br />
+├── package.json<br />
+├── tsconfig.json<br />
 │<br />
-├── src/                       # Source files<br />
-│   ├── app/                   # Next.js application files<br />
-│   │   ├── api/               # API routes<br />
-│   │   │   ├── data/          # Data-related API routes<br />
-│   │   │   │   ├── create/    # Create contact API<br />
-│   │   │   │   ├── delete/    # Delete contact API<br />
-│   │   │   │   ├── read/      # Read contacts API<br />
-│   │   │   │   └── update/    # Update contact API<br />
+├── src/<br />
+│   ├── app/<br />
+│   │   ├── api/<br />
+│   │   │   ├── data/<br />
+│   │   │   │   ├── create/<br />
+│   │   │   │   ├── delete/<br />
+│   │   │   │   ├── read/<br />
+│   │   │   │   └── update/<br />
 │   │   │   └── ...<br />
-│   │   ├── layout.tsx         # Application layout<br />
-│   │   └── page.tsx           # Main page component<br />
+│   │   ├── layout.tsx<br />
+│   │   └── page.tsx<br />
 │   │<br />
-│   ├── components/             # Reusable components<br />
-│   │   ├── EmptyState/        # Empty state component<br />
-│   │   ├── HomePage/          # Home page component<br />
-│   │   ├── Modal/             # Modal component<br />
-│   │   ├── Table/             # Table component for displaying contacts<br />
-│   │   ├── Loader/            # Loader component (if used)<br />
-│   │   ├── signin/            # Sign-in component<br />
-│   │   ├── signup/            # Sign-up component<br />
-│   │   └── Hooks/             # Custom hooks<br />
-│   │       └── useData.tsx    # Hook for data management<br />
+│   ├── components/<br />
+│   │   ├── EmptyState/<br />
+│   │   ├── HomePage/<br />
+│   │   ├── Modal/<br />
+│   │   ├── Table/<br />
+│   │   ├── Loader/<br />
+│   │   ├── signin/<br />
+│   │   ├── signup/<br />
+│   │   └── Hooks/<br />
+│   │       └── useData.tsx<br />
 │   │<br />
-│   ├── Utils/                 # Utility functions and types<br />
-│   │   ├── index.ts           # Utility functions<br />
-│   │   └── types.ts           # TypeScript types<br />
+│   ├── Utils/<br />
+│   │   ├── index.ts<br />
+│   │   └── types.ts<br />
 │   │<br />
-│   └── Assets/                # Static assets (images, etc.)<br />
-│       └── empty.png          # Example image file<br />
+│   └── Assets/<br />
+│       └── empty.png<br />
 │<br />
-└── sample.env                 # Sample environment variables file<br />
+└── sample.env<br />
 
