@@ -17,7 +17,7 @@ interface ContactsInterface {
 }
 
 const Home = () => {
-    const token = localStorage.getItem("contacts-token");
+    const [token, setToken] = useState<string | null>(null)
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [details, setDetails] = useState<DetailsInterface>({
         name: "",
@@ -81,12 +81,14 @@ const Home = () => {
     }
 
     useEffect(() => {
+        const token = localStorage.getItem("contacts-token");
         if (!token) {
             window.location.href = "/signin";
             return;
         }
         token && getContacts(token);
-    }, [token]);
+        setToken(token);
+    }, []);
 
     const callUpdate = async () => {
         setCLoad(true);
