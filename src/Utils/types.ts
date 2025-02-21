@@ -37,3 +37,9 @@ export interface exprenses{
     id?: string;
     type?: string;
 }
+
+export interface EmailOne {
+    email: {
+        email: string,
+    }
+}
